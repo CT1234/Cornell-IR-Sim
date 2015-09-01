@@ -1,0 +1,423 @@
+@import url(http://fonts.googleapis.com/css?family=Noto+Sans:400,700);
+
+body {
+    margin: 0;
+    text-align: center;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.indexPageButton{
+    outline: 1px solid #222222;
+    background-color: #a9deff;
+    margin: 0 auto;
+    display:block;
+    height:8vh;
+    width: 30vw;
+    text-align: center;
+    -webkit-transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s;
+    -o-transition: background-color 0.5s;
+    -ms-transition: background-color 0.5s;
+    transition: background-color .5s;
+}
+
+#startButton{
+    outline: 1px solid #222222;
+    background-color: #a9deff;
+    margin: 0 auto;
+    display:block;
+    height:8vh;
+    width: 20vw;
+    text-align: center;
+    cursor:pointer;
+    -webkit-transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s;
+    -o-transition: background-color 0.5s;
+    -ms-transition: background-color 0.5s;
+    transition: background-color .5s;
+}
+
+
+    .indexPageButton:hover, #startButton:hover {
+        background-color:#a6a6a6;
+        -webkit-transition: background-color 0.5s;
+        -moz-transition: background-color 0.5s;
+        -o-transition: background-color 0.5s;
+        -ms-transition: background-color 0.5s;
+        transition: background-color .5s;
+    }
+
+
+.emptySpaceSidebar{
+    display:block;
+    height:5vh;
+    width: inherit;
+}
+
+.emptySpaceSidebarLarge{
+    display:block;
+    height:35vh;
+    width: inherit;
+    text-align: center;
+}
+
+
+#correctAnswer{
+    white-space: nowrap;
+    display:block;
+    width: inherit;
+    text-align: center;
+    -webkit-transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s;
+    -o-transition: background-color 0.5s;
+    -ms-transition: background-color 0.5s ;
+    transition: background-color .5s ;
+}
+
+#incorrectAnswer{
+    cursor: pointer; 
+    display:block;
+    width: inherit;
+    text-align: center;
+    -webkit-transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s;
+    -o-transition: background-color 0.5s;
+    -ms-transition: background-color 0.5s ;
+    transition: background-color .5s ;
+}
+
+a {
+    text-decoration: none;
+}
+
+.textIndexPage {
+    padding-top: 2.3vh;
+    font-weight: bold;
+    display:block;
+    color:black;
+    text-align: center; 
+}
+
+#answerTextCorrect {
+    display:block;
+    color:green;
+    font-weight: bold;
+    text-align: center; 
+    margin: 0;
+    font-size: 1.2vh;
+}
+
+#answerTextIncorrect {
+    display:block;
+    color:red;
+    font-weight: bold;
+    text-align: center; 
+    margin: 0;
+    font-size: 1.2vh;
+}
+
+.desc {
+    cursor: pointer;
+    outline: 1px solid #222222;
+    background-color:rgb(180, 220, 250) !important;;
+    position:relative;
+    display:inline-block;
+    height: 9vh;
+    width: 12vh;
+    overflow: hidden;
+    word-wrap: break-word;
+    text-align: center;
+    margin: 0 auto;
+}
+
+    .desc:hover {
+    background-color:rgb(150, 200, 250) !important;
+    }
+
+.desc2 {
+    cursor: pointer;
+    outline: 1px solid #222222;
+    background-color:rgb(0, 220, 0) !important;
+    position:relative;
+    display:inline-block;
+    height: 9vmin;
+    width: 15vmin;
+    overflow:hidden;
+    word-wrap: break-word;
+    text-align: center;
+    margin-right: 5px;
+}
+
+    .desc2:hover {
+    background-color:rgb(0, 230, 0) !important;
+    }
+
+    .desc p, .desc2 p, .desc2Inc p{
+        cursor: pointer;
+        font-weight: bold;
+        font-size:1.5vmin;
+        margin-top: 0 auto;
+        line-height: 1.5vh;
+    }
+
+.desc2Inc {
+    cursor: pointer;
+    outline: 1px solid #222222;
+    background-color: rgb(220, 0, 0) !important;
+    position: relative;
+    display: inline-block;
+    height: 9vmin;
+    width: 15vmin;
+    overflow: hidden;
+    word-wrap: break-word;
+    text-align: center;
+    margin-right: 5px;
+}
+
+    .desc2Inc:hover {
+        background-color: rgb(250, 0, 0) !important;
+    }
+
+#video {
+    margin-top:1vh;
+    display:block;
+    width: 100vw;
+    height: 45vh;
+    overflow-y:hidden;
+    overflow-x:hidden;
+}
+
+#videoIntro {
+    margin-top:1vh;
+    display:block;
+    width: 100vw;
+    height: 49vh;
+    overflow-y:auto;
+}
+
+#content {
+    position:fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background-color: #EEEEEE ;
+}
+
+#indexPageContent {
+    position:fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    background-color: #EEEEEE;
+}
+
+.thumbnails {
+    position:relative;
+    margin:0px auto;
+    width: 100vw;
+    padding-top: 1vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    text-align: center !important;
+}
+
+#logo {
+    height: 40vh;
+    width:  100%;
+    display: block;
+    text-align: center;
+    margin-top: 5vh;
+}
+
+#instructions {
+    display: block;
+    width:100vw;
+    height: 30vh;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#instructionList {
+    list-style-type: none;
+}
+
+#main {
+    height: 60vh;
+    width: 100vw;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#select {
+    cursor: pointer; 
+    display:block;
+    height:5vh;
+    width: inherit;
+    text-align: center;
+}
+
+.answerHistory {
+    position:relative;
+    margin:0px auto;
+    width: 100vw;
+    overflow:auto;
+    padding-top: 1vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    text-align: left;
+}
+.textStartButton {
+    padding-top: 2.3vh;
+    font-weight: bold;
+    display:block;
+    color:black;
+    text-align: center; 
+}
+#sidebar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 5vh;
+    background-color: #222222;
+}
+
+#timer {
+    height: 5vh;
+    width: 33%;
+    bottom: 0;
+    left:0;
+    text-align: center;
+    position: fixed;
+}
+
+#score {
+    height: 5vh;
+    width: 33%;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+#selectButton {
+    cursor:pointer;
+    height: 5vh;
+    width: 33%;
+    position: fixed;
+    bottom: 0;
+    left: 33%;
+    right: 33%;
+    background-color:rgb(0, 190, 0) !important;
+    text-align: center;
+}
+    
+    #selectButton:hover {
+    background-color:rgb(0, 205, 0) !important;
+    transition: .3s;
+    }
+
+#sideSpan {
+    font-size: 3.5vh;
+    color: white;
+}
+
+#sideSpanScore {
+    font-size: 3.5vh;
+    color: white;
+    -webkit-transition: color 0.8s ease;
+    -moz-transition: color 0.8s ease;
+    -o-transition: color 0.8s ease;
+    transition: color 0.8s ease;
+}
+
+.no-close .ui-dialog-titlebar-close {
+  display: none;
+}
+.clickCover {
+    position: fixed;
+    background-color:black;
+    opacity: .5;
+    bottom:0;
+    top:0;
+    right:0;
+    left:0;
+    transition: opacity 1s ease-out;
+}
+
+.popUpButtonRight {
+    color:white;
+    cursor: pointer;
+    height:5vh;
+    width:16.5vw;
+    position:fixed;
+    bottom:5vh;
+    opacity:.9;
+    right:34%;
+    background-color:rgb(220, 0, 0) !important;
+}
+
+    .popUpButtonRight:hover{
+        background-color:rgb(250, 0, 0) !important;
+    }
+
+.popUpButtonLeft {
+    color:white;
+    cursor: pointer;
+    height:5vh;
+    width:16.5vw;
+    position:fixed;
+    bottom:5vh;
+    opacity:.9;
+    left:33%;
+    background-color:rgb(0, 205, 0) !important;
+}
+    
+    .popUpButtonLeft:hover{
+        background-color:rgb(0, 220, 0) !important;
+    }
+
+.instructionDialogue {
+    position:fixed;
+    width:50vw;
+    bottom:35%;
+    right:25%;
+    padding-bottom: 3vh;
+    background-color: #EEEEEE;
+}
+
+ul
+{
+list-style-type: none;
+}
+
+.instructions {
+    width: 100%;
+    padding-top: 2.3vh;
+    font-weight: bold;
+    display: block;
+    color: black;
+    text-align: center; 
+}
+
+#resultsPage {
+    display: none;
+    width: 100vw;
+}
+
+.responsive-container {
+    text-align: center;
+	position: relative;
+    width: 100%;
+	height: 40%;
+	overflow: hidden;
+    margin-top:1vh;
+}
+.responsive-container iframe {
+	position: absolute;
+	top: 0; 
+    left: 25%;
+	width: 50vw;
+	height: 100%;
+}
