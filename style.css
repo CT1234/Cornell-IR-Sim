@@ -10,10 +10,10 @@ body {
     outline: 1px solid #222222;
     background-color: #a9deff;
     margin: 0 auto;
-    display:block;
+    margin-top: 1vh;
+    display:table;
     height:8vh;
     width: 30vw;
-    text-align: center;
     -webkit-transition: background-color 0.5s;
     -moz-transition: background-color 0.5s;
     -o-transition: background-color 0.5s;
@@ -21,14 +21,14 @@ body {
     transition: background-color .5s;
 }
 
-#startButton{
+#startMenuButton{
     outline: 1px solid #222222;
     background-color: #a9deff;
     margin: 0 auto;
-    display:block;
+    margin-top: 2vh;
+    display:table;
     height:8vh;
     width: 20vw;
-    text-align: center;
     cursor:pointer;
     -webkit-transition: background-color 0.5s;
     -moz-transition: background-color 0.5s;
@@ -38,7 +38,7 @@ body {
 }
 
 
-    .indexPageButton:hover, #startButton:hover {
+    #startMenuButton:hover, .indexPageButton:hover  {
         background-color:#a6a6a6;
         -webkit-transition: background-color 0.5s;
         -moz-transition: background-color 0.5s;
@@ -46,7 +46,6 @@ body {
         -ms-transition: background-color 0.5s;
         transition: background-color .5s;
     }
-
 
 .emptySpaceSidebar{
     display:block;
@@ -91,11 +90,10 @@ a {
 }
 
 .textIndexPage {
-    padding-top: 2.3vh;
     font-weight: bold;
-    display:block;
+    display:table-cell;
     color:black;
-    text-align: center; 
+    vertical-align: middle;
 }
 
 #answerTextCorrect {
@@ -117,17 +115,18 @@ a {
 }
 
 .desc {
+    margin-top: .5vh;
     cursor: pointer;
     outline: 1px solid #222222;
     background-color:rgb(180, 220, 250) !important;;
     position:relative;
-    display:inline-block;
-    height: 9vh;
+    display:inline-flex;
+    vertical-align: middle;
+    height: 11vh;
     width: 12vh;
     overflow: hidden;
-    word-wrap: break-word;
-    text-align: center;
-    margin: 0 auto;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
 }
 
     .desc:hover {
@@ -135,17 +134,19 @@ a {
     }
 
 .desc2 {
+    margin-right; 1vh;
+    margin-top: 1vh;
     cursor: pointer;
     outline: 1px solid #222222;
-    background-color:rgb(0, 220, 0) !important;
+    background-color:rgb(0, 215, 70) !important;
     position:relative;
-    display:inline-block;
-    height: 9vmin;
-    width: 15vmin;
-    overflow:hidden;
-    word-wrap: break-word;
-    text-align: center;
-    margin-right: 5px;
+    display:inline-flex;
+    vertical-align: middle;
+    height: 11vh;
+    width: 12vh;
+    overflow: hidden;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
 }
 
     .desc2:hover {
@@ -153,29 +154,8 @@ a {
     }
 
     .desc p, .desc2 p, .desc2Inc p{
-        cursor: pointer;
         font-weight: bold;
-        font-size:1.5vmin;
-        margin-top: 0 auto;
-        line-height: 1.5vh;
-    }
-
-.desc2Inc {
-    cursor: pointer;
-    outline: 1px solid #222222;
-    background-color: rgb(220, 0, 0) !important;
-    position: relative;
-    display: inline-block;
-    height: 9vmin;
-    width: 15vmin;
-    overflow: hidden;
-    word-wrap: break-word;
-    text-align: center;
-    margin-right: 5px;
-}
-
-    .desc2Inc:hover {
-        background-color: rgb(250, 0, 0) !important;
+        font-size:1.5vh;
     }
 
 #video {
@@ -214,13 +194,9 @@ a {
 }
 
 .thumbnails {
-    position:relative;
-    margin:0px auto;
+    position: relative;
+    margin: 0px auto;
     width: 100vw;
-    padding-top: 1vh;
-    padding-left: 1vw;
-    padding-right: 1vw;
-    text-align: center !important;
 }
 
 #logo {
@@ -269,11 +245,10 @@ a {
     text-align: left;
 }
 .textStartButton {
-    padding-top: 2.3vh;
     font-weight: bold;
-    display:block;
+    display:table-cell;
+    vertical-align: middle;
     color:black;
-    text-align: center; 
 }
 #sidebar {
     position: fixed;
@@ -333,7 +308,7 @@ a {
 }
 
 .no-close .ui-dialog-titlebar-close {
-  display: none;
+    display: none;
 }
 .clickCover {
     position: fixed;

@@ -37,7 +37,6 @@ thumbDef[18] = "18";
 thumbDef[19] = "19";
 
 var videoLinks = [20];
-
 videoLinks[0] = "137438558";
 videoLinks[1] = "137438559";
 videoLinks[2] = "137438830";
@@ -147,6 +146,7 @@ $(".popUpButtonLeft").click(function () {
         $("#sideSpanScore").css('color', 'rgb(0, 220, 0)');
         if (correctAnswerIndex === 4) {
             answerSummary += "<h2>" + "Total Time: " + seconds + " seconds" + "</h2>";
+            answerSummary += "<h2>" + "Score: " + score + " points" + "</h2>";
             displayScorePage();
         }
         userGuess = -1;
