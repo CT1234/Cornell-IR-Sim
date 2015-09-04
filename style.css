@@ -60,7 +60,6 @@ body {
     text-align: center;
 }
 
-
 #correctAnswer{
     white-space: nowrap;
     display:block;
@@ -155,7 +154,7 @@ a {
 
     .desc p, .desc2 p, .desc2Inc p{
         font-weight: bold;
-        font-size:1.5vh;
+        font-size:1.5vh ;
     }
 
 #video {
@@ -182,6 +181,7 @@ a {
     right: 0;
     height: 100%;
     background-color: #EEEEEE ;
+    overflow-y:auto;
 }
 
 #indexPageContent {
@@ -389,6 +389,7 @@ list-style-type: none;
 	overflow: hidden;
     margin-top:1vh;
 }
+
 .responsive-container iframe {
 	position: absolute;
 	top: 0; 

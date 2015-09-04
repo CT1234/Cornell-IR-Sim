@@ -58,6 +58,28 @@ videoLinks[17] = "137787101";
 videoLinks[18] = "137787103";
 videoLinks[19] = "137787102";
 
+var longDescr = [20];
+longDescr[0] = "Ultrasound the Neck to find target Vein (IJ)";
+longDescr[1] = "Sterilize the field (Prep and Drape)";
+longDescr[2] = "Assemble the catheter and hard tunneling device for use later (assemble)";
+longDescr[3] = "Now that you’re sterile, find the target vein again";
+longDescr[4] = "Anesthetize where you want to enter the vein (venous puncture site)";
+longDescr[5] = "Make a small cut that the needle and catheter can fit through (dermatotomy site)";
+longDescr[6] = "Through the dermatotomy site, puncture the target Vein with your Needle";
+longDescr[7] = "Anesthetize the port site";
+longDescr[8] = "Make an incision that the port can fit through";
+longDescr[9] = "Through the incision, make a subcutaneous pocket for the port to fit";
+longDescr[10] = "Take the catheter you assembled before and tunnel it from the port site to the neck";
+longDescr[11] = "Take off the syringe you placed before, put wire down to the IVC";
+longDescr[12] = "Place a peel away sheath over the wire";
+longDescr[13] = "Use fluoro to check that the tip of the catheter is at the Cavoatrial Junction";
+longDescr[14] = "Cut the catheter so it ends at the cavoatrial junction";
+longDescr[15] = "Connect the port to the properly sized catheter ";
+longDescr[16] = "Flush the port with saline";
+longDescr[17] = "Make sure that the catheter tip ends at the cavoatrial junction, if it doesn’t then try to readjust";
+longDescr[18] = "Flush Port with Heparin";
+longDescr[19] = "Suture and Glue the port site closed";
+
 function lessThanTen(number) {
     if (number >= 10) {return number; } else {return "0" + number; }
 }
@@ -134,26 +156,31 @@ $("#selectButton").click(function () {
     $("#sideSpanScore").css('color', 'white');
 });
 
+$(".desc").dblclick(function () {
+    toggleConfirm();
+    $("#sideSpanScore").css('color', 'white');
+});
+
 $(".popUpButtonLeft").click(function () {
     var buttonName = getButtonName(userGuess);
     if (checkCorrectAnswer(userGuess) && userGuess !== -1) {
         updateScore(1);
         correctAnswerIndex = correctAnswerIndex + 1;
         var newDiv = "<div class='desc2' id='" + userGuess + "'><p>" + correctAnswerIndex + ") " + buttonName + "</p></div>";
-        answerSummary += newDiv;
+        answerSummary += "<h3 style='color:green'>" + correctAnswerIndex + ") " + buttonName + "</h3>";
         $('#newArea').append(newDiv);
         $("#" + userGuess).fadeOut("slow");
         $("#sideSpanScore").css('color', 'rgb(0, 220, 0)');
-        if (correctAnswerIndex === 4) {
-            answerSummary += "<h2>" + "Total Time: " + seconds + " seconds" + "</h2>";
-            answerSummary += "<h2>" + "Score: " + score + " points" + "</h2>";
+        if (correctAnswerIndex === 20) {
+            answerSummary += "<h3>" + "Total Time: " + seconds + " seconds, " 
+                            + "Score: " + score + " points" + "</h3>";
             displayScorePage();
         }
         userGuess = -1;
     } else if (userGuess !== -1) {
         updateScore(-1);
-        var newDivInc = "<div class='desc2Inc' id='" + userGuess + "'><p>" + buttonName + "</p></div>";
-        answerSummary += newDivInc;
+        var newDivInc = "<div class='desc2' id='" + userGuess + "'><p>" + buttonName + "</p></div>";
+        answerSummary += "<h3 style='color:red'>" + buttonName + "</h3>";
         userGuess = -1;
         $("#sideSpanScore").css('color', 'red');
     }
@@ -170,4 +197,8 @@ $(".quizStart").click(function () {
     toggleConfirm();
     $(".desc p").toggle();
     setInterval(updateTimer, 1000);
+});
+
+$(".desc").hover(function () {
+    $(".longDescBox p").text(longDescr[this.id]);
 });
