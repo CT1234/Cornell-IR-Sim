@@ -397,3 +397,17 @@ list-style-type: none;
 	width: 50vw;
 	height: 100%;
 }
+
+#emptySpace20vh {
+   overflow:none;
+   display: block;
+   width: 100%;
+   height:20vh;
+}
+
+#emptySpace5vh {
+   overflow:none;
+   display: block;
+   width: 100%;
+   height:5vh;
+}
