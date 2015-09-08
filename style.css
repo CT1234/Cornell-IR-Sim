@@ -201,6 +201,7 @@ a {
 
 #logo {
     height: 40vh;
+    max-height: 350px;
     width:  100%;
     display: block;
     text-align: center;
