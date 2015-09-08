@@ -8,6 +8,7 @@ var answerSummary = "<h1><u>Answer Summary</u></h1>",
     mp4Vid = document.getElementById('mp4Source'),
     player = document.getElementById('video'),
     previousClick,
+    previousClickNumber,
     score = 0,
     seconds = 0,
     userGuess = -1;
@@ -77,8 +78,8 @@ longDescr[14] = "Cut the catheter so it ends at the cavoatrial junction";
 longDescr[15] = "Connect the port to the properly sized catheter ";
 longDescr[16] = "Flush the port with saline";
 longDescr[17] = "Make sure that the catheter tip ends at the cavoatrial junction, if it doesn’t then try to readjust";
-longDescr[18] = "Flush Port with Heparin";
-longDescr[19] = "Suture and Glue the port site closed";
+longDescr[18] = "Suture and Glue the port site closed";
+longDescr[19] = "Flush Port with Heparin";
 
 function lessThanTen(number) {
     if (number >= 10) {return number; } else {return "0" + number; }
@@ -136,11 +137,19 @@ function getVideo(videoId) {
 $(".desc").click(function () {
     $(previousClick).css('outline', "solid 1px black");
     userGuess = parseInt(this.id, 10);
-    getVideo(this.id);
+    if (this.id !== previousClickNumber) {
+        getVideo(this.id);
+    }
     $("#" + this.id).css('outline', "solid 2px black");
     previousClick = "#" + this.id;
     $('.popUpButtonLeft').hide(0);
     $('.popUpButtonRight').hide(0);
+    previousClickNumber = this.id;
+});
+
+$(".desc").dblclick(function () {
+    toggleConfirm();
+    $("#sideSpanScore").css('color', 'white');
 });
 
 $(document).ready(function () {
@@ -156,11 +165,6 @@ $("#selectButton").click(function () {
     $("#sideSpanScore").css('color', 'white');
 });
 
-$(".desc").dblclick(function () {
-    toggleConfirm();
-    $("#sideSpanScore").css('color', 'white');
-});
-
 $(".popUpButtonLeft").click(function () {
     var buttonName = getButtonName(userGuess);
     if (checkCorrectAnswer(userGuess) && userGuess !== -1) {
@@ -172,8 +176,7 @@ $(".popUpButtonLeft").click(function () {
         $("#" + userGuess).fadeOut("slow");
         $("#sideSpanScore").css('color', 'rgb(0, 220, 0)');
         if (correctAnswerIndex === 20) {
-            answerSummary += "<h3>" + "Total Time: " + seconds + " seconds, " 
-                            + "Score: " + score + " points" + "</h3>";
+            answerSummary += "<h3>" + "Total Time: " + seconds + " seconds, " + "Score: " + score + " points" + "</h3>";
             displayScorePage();
         }
         userGuess = -1;

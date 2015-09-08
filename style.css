@@ -356,24 +356,26 @@ a {
 .instructionDialogue {
     position:fixed;
     width:50vw;
-    bottom:35%;
-    right:25%;
+    bottom:25%;
+    left:25%;
     padding-bottom: 3vh;
     background-color: #EEEEEE;
 }
 
 ul
 {
-list-style-type: none;
+     list-style-type: none;
+     list-style-position: inside;
+     margin:0;
+     padding:0;
 }
 
 .instructions {
-    width: 100%;
     padding-top: 2.3vh;
     font-weight: bold;
     display: block;
     color: black;
-    text-align: center; 
+    font-size: 2vh;
 }
 
 #resultsPage {
